@@ -1,0 +1,157 @@
+//****
+//Extends
+//*****/
+%nodisplay {
+	display:none;
+}
+
+%displayCell {
+	display: table-cell;
+}
+
+%displayInlineBlock {
+	display: inline-block;
+}
+
+%hoverTransition {
+	transition: all 300ms ease-in;
+}
+
+%hoverScale {
+	transform: scale(1.1);
+}
+
+%centering--xy {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%mainFlexContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+
+//****
+//Mixins
+//*****/
+@mixin nodisplay {
+	display:none;
+}
+
+@mixin displayCell {
+	display: table-cell;
+}
+
+@mixin displayInlineBlock {
+	display: inline-block;
+}
+
+@mixin hoverTransition {
+	transition: all 300ms ease;
+}
+
+@mixin hoverScale {
+	transform: scale(1.1);
+}
+
+@mixin centering--xy {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin mainFlexContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+//smaller bp should go into $bp1 otherwise it will overwrite the larger $bp2; cascade effect
+@mixin flexCard($bp1, $numChildCard1, $bp2:"not-given", $numChildCard2:"not-given") {
+	//mobile width
+	width:100%;
+
+	@if $bp2 != "not-given" and $numChildCard2 != "not-given" {
+		//columns at breakpoint 1
+		@media screen and (min-width: $bp1) {
+			width: 100%/$numChildCard1 - 1%;
+		}
+
+		//columns at breakpoint 2
+		@media screen and (min-width: $bp2) {
+			width: 100%/$numChildCard2 - 1%;
+		}
+	}
+	@else {
+		//columns at breakpoint 1
+		@media screen and (min-width: $bp1) {
+			width: 100%/$numChildCard1 - 1%;
+		}
+	}
+}
+
+//smaller bp should go into $bp1 otherwise it will overwrite the larger $bp2; cascade effect
+@mixin flexCardPC($bp1, $numChildCard1, $bp2:"not-given", $numChildCard2:"not-given") {
+	//mobile width
+	width:100%;
+
+	@if $bp2 != "not-given" and $numChildCard2 != "not-given" {
+		//columns at breakpoint 1
+		@media screen and (min-width: $bp1) {
+			width: $numChildCard1;
+		}
+
+		//columns at breakpoint 2
+		@media screen and (min-width: $bp2) {
+			width: $numChildCard2;
+		}
+	}
+	@else {
+		//columns at breakpoint 1
+		@media screen and (min-width: $bp1) {
+			width: $numChildCard1;
+		}
+	}
+}
+
+//smaller bp should go into $bp1 otherwise it will overwrite the larger $bp2; cascade effect
+@mixin flexCardARGS($params...) {
+	//mobile width
+	width:100%;
+
+	$i : 1;
+
+	@while $i<length($params) {
+		@media screen and (min-width: nth($params, $i)) {
+			width: nth($params, $i+1);
+		}
+		$i: $i+2;
+	}
+
+}
+
+//Positive or negative integer exponents
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  } @else if $exponent == 0 {
+      $value: 1;
+  }
+
+  @return $value;
+}

@@ -1,0 +1,41 @@
+/*
+*
+current exploration page styles
+*
+*/
+section.slant-edge {
+    &:nth-child(even) {
+        position: relative;
+        transform: skewY(-4deg);
+        transform-origin: left;
+        top: 1em;
+        padding-top: 1vh !important;
+        background-color: fade-out(darken($accent,4%),0.32);
+        margin-bottom: 2em;
+
+        &:last-child {
+            margin-bottom: 0;
+            top: unset;
+            bottom: -6em;
+            padding-bottom: 6em;
+            margin-top: -6em;
+        }
+
+        @media all and (min-width: 960px) {
+            top: 3.8em;
+            padding-top: 3vh !important;
+            padding-bottom: 3em;
+        }
+
+        &>div {
+            transform: skewY(4deg);
+        }
+    }
+
+    &:nth-child(odd) {
+        @media all and (min-width: 960px) {
+            padding-top: 3vh !important;
+            padding-bottom: 3em;
+        }
+    }
+}

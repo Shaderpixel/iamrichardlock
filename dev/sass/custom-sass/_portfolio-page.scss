@@ -1,0 +1,368 @@
+.projects-section {
+    padding: 6.25em 0 2em !important;
+    background-color: fade-out(darken($accent,4%),0.32);
+
+    @media all and (min-width: 768px) {
+        padding: 2em 0 !important;
+    }
+
+    .project-container {
+        display: flex;
+        flex-flow:column wrap;
+        align-items: center;
+        position: relative;
+        background-position: 50% 0;
+        background-size: 53%;
+        background-repeat: no-repeat;
+        padding: 0 calc(1em + 3.5vw) 1em;
+        padding-top: 27%;
+        padding-bottom: 5em;
+
+        @media all and (min-width: 600xwpx) {
+            padding: 0 calc(2em + 3.5vw) 1em;
+        }
+
+        @media all and (min-width: 768px) {
+            flex-flow:row wrap;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            background-size: 47%;
+        }
+
+        // .image-overlay {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100vw;
+        // }
+
+        &:nth-child(even) {
+
+            .image-overlay {
+                // background-image: linear-gradient(to left,$accent 3%,fade-out($accent, 0.1) 40%,transparent calc(33% + 33vw));
+            }
+
+            @media all and (min-width: 768px) {
+                justify-content: flex-end;
+                background-position: -8% 13em;
+                padding-right: 5%;
+                padding-left: 0;
+            }
+        }
+
+        &:nth-child(odd) {
+
+            .image-overlay {
+                // background-image: linear-gradient(to right,$accent 3%,fade-out($accent, 0.1) 40%,transparent calc(33% + 33vw));
+            }
+
+            @media all and (min-width: 768px) {
+                justify-content: flex-start;
+                background-position: 108.5% 13em;
+                padding-left: 5%;
+                padding-right: 0;
+            }
+        }
+
+        .project--details {
+            flex: 1 0 100%;
+            z-index: 2;
+
+            @media all and (min-width: 768px) {
+                flex: 0 1 53%;
+            }
+
+            .project-container--project-title {
+                font-size: calc(1em + 1.7vw);
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: 1em;
+                font-weight: 400;
+
+
+                @media all and (min-width: 795px) {
+                    font-size: 2em;
+                    margin-top: 2em;
+                    margin-bottom: 1em;
+                }
+            }
+
+            .project-container--project-description {
+                color: darken($regularFontBlack, 5%);
+                margin-bottom: 1rem;
+            }
+
+            .project-container--technology-list {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 1.25em;
+
+                li {
+                    padding: 0.3em 0.6em;
+                    margin: 0.25em 0.2em 0.5em 0;
+                    display: inline-block;
+                    font-size: 0.67em;
+                    border-radius: 0.55em;
+                    text-transform: uppercase;
+                    background-color: darken($secondary, 6.8%);
+                    color: $lightGray;
+                    @extend %header-text;
+
+                    @media all and (min-width:768px) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            .project-container--site-link {
+                display: inline-block;
+                margin: {
+                    top: 0.5em;
+                    bottom: 0.5em;
+                }
+                padding: 0.5em 0;
+                border: 1px solid;
+                padding: 0.5em 1em;
+                @extend %hoverTransition;
+                text: {
+                    align: center;
+                    transform: uppercase;
+                    decoration: none;
+
+                }
+                @extend %header-text;
+                font: {
+                    size: 0.85em;
+                    weight: 400;
+                }
+                color: darken($regularFontBlack, 5%);
+
+                &:hover {
+                    color: darken($secondary, 10%);
+                    transform: scale(1.1);
+
+                }
+            }
+
+            @media all and (min-width: 966px) {
+                a.project-container--site-link {
+                    margin-right: 0.85em;
+                }
+            }
+        }
+    }
+}
+
+#twitter-widget-0 {
+    width: 100% !important;
+}
+
+.projects-section .project-container--dcf {
+    background-image: url(/images/dcf-5-min.png);
+    padding-top: 18em;
+    background-size: 15em;
+}
+
+.projects-section .project-container--sickfits {
+    background-image: url(/images/sickfits-min.png);
+    padding-top: 22em;
+    background-size: 15em;
+}
+
+.projects-section .project-container--redux {
+    background-image: url(/images/reduxstagram-min.png);
+    padding-top: 22em;
+    background-size: 15em;
+}
+
+.projects-section .project-container--cotd {
+    background-image: url(/images/cotd-cropped-min.png);
+    padding-top: 53%;
+    background-size: 88%;
+}
+
+
+.project-container--ncard {
+    background-image: url(/images/ncard-mobile-min.png);
+}
+
+.project-container--bf {
+    background-image: url(/images/bf-mobile-min.png);
+}
+
+.project-container--acbn {
+    background-image: url(/images/acbn-mobile-min-1.png);
+}
+
+.project-container--facilities {
+    background-image: url(/images/facilities-mobile-min.png);
+}
+
+.project-container--nrt {
+    background-image: url(/images/nrt-mobile-min.png);
+}
+
+.project-container--yy {
+    background-image: url(/images/yy-mobile-min.png);
+}
+
+.project-container--people-admin {
+    background-image: url(/images/people-admin-mobile-min.png);
+}
+
+.project-container--utility-services {
+    background-image: url(/images/utility-mobile-min.png);
+}
+
+.project-container--parking-services {
+    background-image: url(/images/parking-mobile-min.png);
+}
+
+.project-container--procurement-services {
+    background-image: url(/images/procurement-mobile-min.png);
+}
+
+.project-container.project-container--procurement-subsidiary {
+    background-image: url(/images/procurement-subsidiary-mobile-min-1.png);
+    background-size: 78% ;
+    padding-top: 31%;
+}
+
+.project-container--student-accounts {
+    background-image: url(/images/stuacct-mobile-min.png);
+}
+
+.project-container--university-police {
+    background-image: url(/images/police-mobile-min.png);
+}
+
+.project-container--sustainability {
+    background-image: url(/images/sustainability-mobile-min.png);
+}
+
+.project-container--web-dev-network {
+    background-image: url(/images/wdn-mobile-min.png);
+}
+
+.project-container--web-summit {
+    background-image: url(/images/web-summit-mobile-min.png);
+}
+
+@media all and (min-width:768px ) {
+    .projects-section .project-container.project-container--dcf {
+        background-image: url(/images/dcf-5-min.png);
+        background-size: 37%;
+        background-position: 96% 12.5em;
+        padding-top: 2em;
+    }
+
+    .projects-section .project-container.project-container--sickfits {
+        background-image: url(/images/sickfits-min.png);
+        background-size: 47%;
+        background-position: -4% 10em;
+        padding-top: 2em;
+    }
+
+    .projects-section .project-container.project-container--redux {
+        background-image: url(/images/reduxstagram-min.png);
+        background-size: 30%;
+        background-position: 90% 75%;
+        padding-top: 2em;
+    }
+
+    .projects-section .project-container.project-container--cotd {
+        background-image: url(/images/cotd-cropped-min.png);
+        background-size: 41%;
+        background-position: 2% 11em;
+        padding-top: 2em;
+    }
+
+    .project-container--ncard {
+        background-image: url(/images/ncard-desktop-min.png);
+    }
+
+    .project-container--bf {
+        background-image: url(/images/bf-desktop-min.png);
+    }
+
+    .projects-section .project-container.project-container--acbn {
+        background-image: url(/images/acbn-desktop-min-1.png);
+        background-position: 108.5% 16em;
+    }
+
+    .project-container--nrt {
+        background-image: url(/images/nrt-desktop-min.png);
+    }
+
+    .project-container--procurement-services {
+        background-image: url(/images/facilities-desktop-min.png);
+    }
+
+    .project-container--yy {
+        background-image: url(/images/yy-desktop-min.png);
+    }
+
+    .project-container--people-admin {
+        background-image: url(/images/people-admin-desktop-min.png);
+    }
+
+    .project-container--utility-services {
+        background-image: url(/images/utility-desktop-min.png);
+    }
+
+    .project-container--parking-services {
+        background-image: url(/images/parking-desktop-min.png);
+    }
+
+    .project-container--procurement-services {
+        background-image: url(/images/procurement-desktop-min.png);
+    }
+
+    .projects-section .project-container.project-container--procurement-subsidiary {
+        background-image: url(/images/procurement-subsidiary-desktop-min-1.png);
+        background-position: 102% 19em; // right
+        //background-position: -2.4% 54% !important; // left
+        background-size: 50%;
+        padding-top: 2em;
+
+        .project--details {
+            flex: 0 1 49%;
+        }
+    }
+
+    .project-container--student-accounts {
+        background-image: url(/images/stuacct-desktop-min.png);
+    }
+
+    .project-container--university-police {
+        background-image: url(/images/police-desktop-min.png);
+    }
+
+    .project-container--sustainability {
+        background-image: url(/images/sustainability-desktop-min.png);
+    }
+
+    .project-container--web-dev-network {
+        background-image: url(/images/wdn-desktop-min.png);
+    }
+
+    .project-container--web-summit {
+        background-image: url(/images/web-summit-desktop-min.png);
+    }
+}
+
+@media all and (min-width:1500px ) {
+    .projects-section .project-container.project-container--redux {
+        background-size: contain;
+        margin-top: 4em;
+        padding-top: 0;
+    }
+
+    .projects-section .project-container.project-container--sickfits {
+        background-size: 37%;
+        background-position: 6% 8.1em;
+        margin-top: 4em;
+        padding-top: 0;
+    }
+}

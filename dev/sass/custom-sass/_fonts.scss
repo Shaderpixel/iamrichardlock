@@ -1,0 +1,12 @@
+//****
+//Variables
+//*****/
+$regular-text: 'Roboto', sans-serif;
+$header-text: 'Lato', sans-serif;
+$script-text: 'Roboto Mono', monospace;
+$special-text: 'Playfair Display SC', serif;
+
+%regular-text {font-family: 'Roboto', sans-serif;}
+%header-text {font-family:'Lato', sans-serif;}
+%script-text {font-family:'Roboto Mono', monospace;}
+%serif-text {font-family:'Playfair Display SC', serif;}

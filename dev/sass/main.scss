@@ -1,0 +1,32 @@
+// Override bootstrap variables here (do not use !default)
+// ===============================
+//@import "../custom-variables";
+
+// Include Bootstrap itself
+// ===============================
+@import "vendor-sass/bootstrap";
+@import "vendor-sass/bootstrap-compass";
+
+// Insert mixins
+// ===============================
+@import "custom-sass/mixins";
+
+// Insert variables
+// ===============================
+@import "custom-sass/colors";
+@import "custom-sass/fonts";
+@import "custom-sass/keyframe-animations";
+@import "custom-sass/media-query-dimensions";
+
+// Insert overwrites for navbar, buttons, alerts, etc.
+// ===============================
+
+// Insert own style here
+// ===============================
+@import "custom-sass/general-styles";
+@import "custom-sass/styles-screen";
+@import "custom-sass/helper-classes";
+@import "custom-sass/homepage";
+@import "custom-sass/portfolio-page";
+@import "custom-sass/about-me";
+@import "custom-sass/current-explorations";

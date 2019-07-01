@@ -1,0 +1,164 @@
+/*
+*
+  about me page styles
+*
+*/
+
+a.cta-button--resume{
+  display: block;
+  max-width: 30em;
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $header-text;
+  font-weight: 700;
+
+  &:hover {
+    transform: translate3d(0,0,0) scale(1.1);
+  }
+}
+
+.resume-cta-button--bottom-spacer {
+  margin-bottom: 3.8em;
+}
+
+/*Skill charts section of about me*/
+.skill-charts-section {
+
+  .skill-row--large {
+    .skill-card {
+      padding: 1em;
+
+      @media screen and (min-width: 953px) {
+        padding: 0.8em;
+      }
+    }
+  }
+
+  .skill-row--small {
+    margin-top: 2em;
+
+    .skill-card {
+
+      @media all and (min-width: 320px) and (max-width: 810px) {
+        margin-bottom: 1em;
+      }
+
+      @media all and (min-width: 810px) and (max-width: 1416px) {
+        margin-bottom: 2em;
+      }
+
+      @media screen and (min-width: 1416px) {
+          padding: 1em;
+      }
+    }
+  }
+
+  .flex-card--half {
+    @include flexCardARGS(560px, 49%);
+  }
+
+  .flex-card--fourth {
+    @include flexCardARGS(320px, 41%, 400px, 45%, 768px, 38%, 810px, 25%);
+  }
+
+  .flex-card--sixth {
+    @include flexCardARGS(320px, 32%, 810px, 16%);
+  }
+
+}
+
+.skill-card {
+    position: relative;
+
+    &nth-child 1-3 {
+      @media screen and (min-width: 320px) {
+        margin-bottom: 1em;
+      }
+    }
+
+  .skill-text {
+    position: absolute;
+    text-align: center;
+    font-size: 0.9em;
+    @include centering--xy;
+
+    &.text--large {
+      font-size: 1.1em;
+    }
+  }
+}
+
+/*tools section of resume*/
+.tools-section {
+  margin-top: 3em;
+  margin-bottom: 2em;
+
+  .flex-card--sixth {
+    @include flexCardARGS(320px, 32%, 500px, 24%, 810px, 16%);
+  }
+
+  .icon--skill-logo {
+    width: 70%;
+    margin-bottom: 1em;
+  }
+
+  .icon--skill-tooltip {
+    background-color: $lightGray;
+    text-align: center;
+    border: 3px solid $accent;
+    padding: 0.5em 1em;
+    transform: translateY(-2em);
+    position: relative;
+    visibility: collapse;
+    opacity: 0;
+    z-index: -1;
+    @include hoverTransition;
+
+    &:before {
+      position: absolute;
+      border-left: solid transparent 14px;
+      border-right: solid transparent 14px;
+      border-bottom: solid $accent 14px;
+      top: -14px;
+      content: " ";
+      height: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+    }
+
+    &:after {
+      position: absolute;
+      border-left: solid transparent 10px;
+      border-right: solid transparent 10px;
+      border-bottom: solid $lightGray 10px;
+      top: -10px;
+      content: " ";
+      height: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+    }
+  }
+
+  .icon--skill-link {
+    @include mainFlexContainer;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2em;
+    height: 100%;
+    text-decoration: none;
+    min-height: 12.5em;
+
+    &:hover, &:focus {
+      .icon--skill-tooltip {
+        visibility: visible;
+        transform: translateY(1em);
+        opacity: 1;
+      }
+    }
+  }
+}

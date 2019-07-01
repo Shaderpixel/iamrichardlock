@@ -1,0 +1,68 @@
+function MyCoolAnimation(node, animation, update) {
+  this.node = node;
+  this.animation = animation;
+  this.update = update;
+}
+
+MyCoolAnimation.prototype = {
+  node: null,
+  animation: null,
+  update: null,
+  isDirty: false,
+  draw: function() {
+    // same logic
+    if (!this.isDirty) {
+      return
+    }
+
+    this.isDirty = false;
+    this.update();
+  },
+  makeDirty: function() {
+    this.isDirty = false
+  }
+}
+
+var myAnimation = new MyCoolAnimation(
+  document.querySelector(".gs-target--scrollVisibility"),
+  TweenLite.from(".gs-target--scrollVisibility", 1, {
+                autoAlpha:0,
+                ease: Linear.easeNone,
+                paused: true
+            }),
+  function() {
+
+  var min = Math.abs(this.node.offsetTop - vh)
+            var max = min + (this.node.offsetHeight + vh);
+
+            if (window.pageYOffset >= min && window.pageYOffset <= max) {
+              if (!this.animation.isActive()) {
+                this.animation.play();
+                //debug
+                // console.log("play");
+              }
+            } else if (window.pageYOffset < min || window.pageYOffset > max) {
+              this.animation.pause(0);
+              //debug
+              // console.log("pause");
+            }
+}
+)
+var updateArray = [];
+updateArray.push(myAnimation);
+
+TweenLite.delayedCall(0.25, function() {
+  window.addEventListener("resize", resize);
+  document.addEventListener("scroll", queueUpdate);
+  document.addEventListener("touchmove", queueUpdate);
+  TweenLite.ticker.addEventListener("tick", function(){
+    //loop through and call each function in the array
+    updateArray.forEach(function(myAnimation) {
+      myAnimation.draw()
+    });
+  });
+});
+
+
+
+

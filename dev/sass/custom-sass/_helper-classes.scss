@@ -1,0 +1,147 @@
+/*
+*
+helper classes
+*
+*/
+.roman-list--lower {
+  list-style-type: lower-roman;
+}
+
+.roman-list--upper {
+  list-style-type: upper-roman;
+}
+
+.two-col-list {
+    padding: 0;
+    overflow: auto;
+    padding: 1em 0 1em 6px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    @media screen and (min-width:560px) {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 1em;
+    }
+
+    li {
+        position: relative;
+        margin-left: 27px;
+        -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+
+        // &:before {
+        //     position: absolute;
+        //     content: '\2022';
+        //     left: -27px;
+        //     height: 20px;
+        //     width: 20px;
+        // }
+
+        & > ul {
+          padding: 0.25em;
+
+          li {
+            margin-left: 1.15em;
+          }
+        }
+    }
+
+}
+
+//in page links jump to position
+a.anchor {
+    display: block;
+    position: relative;
+    top: -84px;
+    visibility: hidden;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.mobile-unhide-bp1 {
+    @media screen and (min-width: 480px) {
+        display: initial;
+    }
+}
+
+.td-mobile-hide {
+    display: none;
+
+    @media screen and (min-width: 400px) {
+        display: table-cell;
+    }
+}
+
+.clear-margin {
+  margin: 0;
+}
+
+.clear-margin--top {
+  margin-top: 0;
+}
+
+.clear-margin--bottom {
+  margin-bottom: 0;
+}
+
+.clear-margin--left {
+  margin-left: 0;
+}
+
+.clear-margin--right {
+  margin-right: 0;
+}
+
+.clear-padding {
+  padding: 0;
+}
+
+.clear-padding--top {
+  padding-top: 0;
+}
+
+.clear-padding--bottom {
+  padding-bottom: 0;
+}
+
+.clear-padding--left {
+  padding-left: 0;
+}
+
+.clear-padding--right {
+  padding-right: 0;
+}
+
+.asterisk {
+    color: $huskerRed;
+}
+
+.centered {
+  float: none!important;
+  margin: 0 auto!important;
+}
+
+//to hide text meant for screen readers {
+.screen-reader-text {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.text-center {
+  text-align: center;
+}

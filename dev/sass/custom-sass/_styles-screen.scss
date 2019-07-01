@@ -1,0 +1,24 @@
+/*
+*
+  project page styles
+*
+*/
+.project--client, .project--launch-date small{
+   font-family: $header-text;
+   font-weight: 300;
+}
+
+.project--client {
+  text-transform: uppercase;
+  margin-bottom: -0.2rem;
+  margin-top: 0.9rem;
+}
+
+.project--link {
+  margin-top: 1em;
+  float: right;
+  font-size: 0.67em;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  @include hoverTransition;
+}
