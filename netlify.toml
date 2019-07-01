@@ -1,4 +1,4 @@
 [build]
-base = "gulp-tasks"
-publish = "../dist"
-command = "gulp build"
+base = ""
+publish = "dist"
+command = "cd gulp-tasks && gulp build"
