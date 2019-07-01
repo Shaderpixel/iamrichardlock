@@ -1,4 +1,4 @@
 [build]
 base = ""
 publish = "dist"
-command = "cd gulp-tasks && gulp build"
+command = "cd gulp-tasks && npm run build"
