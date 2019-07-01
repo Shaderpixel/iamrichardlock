@@ -14,21 +14,22 @@ $(function(){
     //GSAP code
     //***********
     //Homepage Animations
-    if ($(".homepage-main").length) {
+  if (document.querySelector('.homepage-main')) {
         TweenLite.from(".special-header",1.8,{
             y: -200,
             autoAlpha:0,
+            delay: 0.3,
             ease: Power1.easeOut,
             textShadow:0,
         });
         TweenLite.from(".header-subtitle",0.5,{
             autoAlpha:0,
-            delay:1.8,
+            delay:2.1,
             textShadow:0,
         });
         TweenMax.staggerFrom(".homepage-nav--flex-card",1, {
             autoAlpha:0,
-            delay:2.3,
+            delay:2.6,
             y:200,
         }, 0.3);
     }

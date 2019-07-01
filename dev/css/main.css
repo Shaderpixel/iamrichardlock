@@ -6813,7 +6813,9 @@ a.anchor {
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238e8e89' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"), -moz-linear-gradient(45deg, #1b1b16, #282823, #5b5b56);
   color: #fff;
   padding: 0 10vw; }
-  .homepage-main h1, .homepage-main h2, .homepage-main h3 {
+  .homepage-main h1,
+  .homepage-main h2,
+  .homepage-main h3 {
     color: #fff; }
 
 .homepage-splash {
