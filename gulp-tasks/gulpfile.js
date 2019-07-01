@@ -202,8 +202,8 @@ gulp.task('imageFixedCopy', function() {
 gulp.task('js-build', function(){
   return gulp.src(['../dev/js/vendor-js-crit/jquery/jquery.js', '!../dev/js/vendor-js-crit/**/*.min.js', '../dev/js/vendor-js-crit/**/*.js',  '../dev/js/site.js', '../dev/js/chart-data.js','!../dev/js/dont-touch'])
   .pipe(customPlumber('Error Running JS-BUILD'))
-  .pipe(plugins.jshint())
-  .pipe(plugins.jshint.reporter('default'))
+  // .pipe(plugins.jshint())
+  // .pipe(plugins.jshint.reporter('default'))
   .pipe(plugins.sourcemaps.init())
   .pipe(plugins.concat('main.js'), {newline: ';'})
   .pipe(plugins.uglify())
