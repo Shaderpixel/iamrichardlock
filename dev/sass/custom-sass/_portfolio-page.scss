@@ -153,12 +153,6 @@
   width: 100% !important;
 }
 
-.projects-section .project-container--9thco {
-  background-image: url(/images/9thco-mobile.webp);
-  padding-top: 18em;
-  background-size: 15em;
-}
-
 .projects-section .project-container--dcf {
   background-image: url(/images/dcf-5-min.png);
   padding-top: 18em;
@@ -250,13 +244,6 @@
 }
 
 @media all and (min-width: 768px) {
-  .projects-section .project-container.project-container--9thco {
-    background-image: url(/images/9thco-mobile.webp);
-    background-size: 37%;
-    background-position: 96% 12.5em;
-    padding-top: 2em;
-  }
-
   .projects-section .project-container.project-container--dcf {
     background-image: url(/images/dcf-5-min.png);
     background-size: 37%;
