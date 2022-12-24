@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Gulp task project dependent modules",
   "main": "gulpfile.js",
+  "engines" : {
+    "node" : "11.15.0"
+  },
   "scripts": {
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"

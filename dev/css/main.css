@@ -7006,6 +7006,12 @@ a.anchor {
 #twitter-widget-0 {
   width: 100% !important; }
 
+.projects-section .project-container--9thco {
+  background-image: url(/images/9thco-mobile.webp); }
+
+.projects-section .project-container--mobiltex {
+  background-image: url(/images/mobiltex-mobile.webp); }
+
 .projects-section .project-container--dcf {
   background-image: url(/images/dcf-5-min.png);
   padding-top: 18em;
@@ -7077,6 +7083,10 @@ a.anchor {
   background-image: url(/images/web-summit-mobile-min.png); }
 
 @media all and (min-width: 768px) {
+  .projects-section .project-container.project-container--9thco {
+    background-image: url(/images/9thco-desktop.webp); }
+  .projects-section .project-container.project-container--mobiltex {
+    background-image: url(/images/mobiltex-desktop.webp); }
   .projects-section .project-container.project-container--dcf {
     background-image: url(/images/dcf-5-min.png);
     background-size: 37%;
