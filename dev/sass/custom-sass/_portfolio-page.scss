@@ -155,8 +155,10 @@
 
 .projects-section .project-container--9thco {
   background-image: url(/images/9thco-mobile.webp);
-  padding-top: 18em;
-  background-size: 15em;
+}
+
+.projects-section .project-container--mobiltex {
+  background-image: url(/images/mobiltex-mobile.webp);
 }
 
 .projects-section .project-container--dcf {
@@ -251,10 +253,11 @@
 
 @media all and (min-width: 768px) {
   .projects-section .project-container.project-container--9thco {
-    background-image: url(/images/9thco-mobile.webp);
-    background-size: 37%;
-    background-position: 96% 12.5em;
-    padding-top: 2em;
+    background-image: url(/images/9thco-desktop.webp);
+  }
+
+  .projects-section .project-container.project-container--mobiltex {
+    background-image: url(/images/mobiltex-desktop.webp);
   }
 
   .projects-section .project-container.project-container--dcf {
